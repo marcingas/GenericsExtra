@@ -17,9 +17,10 @@ public class Main {
         }
 //        although UJStudent extend Student so we can say its the same, when used as
 //        a reference types, a container of one type has no relationship to the same container of another type
+        System.out.println("____UJSTUDENT LIST______");
         printStudent(ujStudents);
     }
-    public static void printStudent(List<Student> students){
+    public static <T> void printStudent(List<T> students){
         for(var student: students){
             System.out.println(student);
         }
