@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Student {
+public class Student implements QueryItem{
     private String name;
     private String course;
     private int yearStared;
@@ -23,5 +23,16 @@ public class Student {
         course = courses[random.nextInt(3)];
         yearStared = random.nextInt(2018, 2023);
 
+    }
+
+    @Override
+    public boolean matchFieldValue(String fieldName, String value) {
+        String fName = fieldName.toUpperCase();
+        return switch (fName){
+            case "NAME"-> name.equalsIgnoreCase(value);
+            case "COURSE"-> course.equalsIgnoreCase(value);
+            case "YEARSTARTED"-> yearStared==(Integer.parseInt(value));
+            default -> false;
+        };
     }
 }

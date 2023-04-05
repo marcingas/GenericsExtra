@@ -26,6 +26,11 @@ public class Main {
         testList(new ArrayList<String>(List.of("John", "Poul")));
         testList(new ArrayList<Integer>(List.of(1, 2)));
         testList(new ArrayList<>(List.of(1, "john")));
+
+        var queryList = new QueryList<>(ujStudents);
+        var matches = queryList.getMatches("Course", "Python");
+        System.out.println("students studying Python----------");
+        printMoreLists(matches);
     }
 
     public static void testList(List<?>list){
