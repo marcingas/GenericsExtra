@@ -31,6 +31,10 @@ public class Main {
         var matches = queryList.getMatches("Course", "Python");
         System.out.println("students studying Python----------");
         printMoreLists(matches);
+
+        var students2021 = QueryList.getMatches(students,"YearStarted","2021");
+        System.out.println("Students started in 2021 with static method getMatches:");
+        printMoreLists(students2021);
     }
 
     public static void testList(List<?>list){
