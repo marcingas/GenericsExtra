@@ -1,6 +1,7 @@
 package pl.marcin;
 
 import pl.marcin.model.UJStudent;
+import pl.marcin.model.UJStudentComparator;
 import pl.marcin.util.QueryList;
 
 import java.util.Comparator;
@@ -19,8 +20,10 @@ public class StudentChallengeRunner {
         System.out.println("Matches");
         var matches = queryList
                 .getMatches("PercentComplete","50")
-                .getMatches("Course","Python")
-                .getMatches("YearStarted","2020");
+                .getMatches("Course","Python");
+//                .getMatches("YearStarted","2020");
+//        sort by % complete using Comparator;
+        matches.sort(new UJStudentComparator());
         printList(matches);
     }
 
