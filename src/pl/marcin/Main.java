@@ -1,6 +1,11 @@
+package pl.marcin;
+
+import pl.marcin.model.Student;
+import pl.marcin.model.UJStudent;
+import pl.marcin.util.QueryList;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +22,7 @@ public class Main {
         for(int i = 0; i < studentCount; i++){
             ujStudents.add(new UJStudent());
         }
-//        although UJStudent extend Student so we can say its the same, when used as
+//        although pl.marcin.model.UJStudent extend pl.marcin.model.Student so we can say its the same, when used as
 //        a reference types, a container of one type has no relationship to the same container of another type
         System.out.println("____UJSTUDENT LIST______");
 //        printStudent(ujStudents);

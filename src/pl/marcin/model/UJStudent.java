@@ -1,7 +1,9 @@
-public class UJStudent extends Student{
+package pl.marcin.model;
+
+public class UJStudent extends Student {
     private double percentComplete;
     public UJStudent(){
-        percentComplete = random.nextDouble(0,100.001);
+        percentComplete = Student.random.nextDouble(0,100.001);
     }
 
     @Override
