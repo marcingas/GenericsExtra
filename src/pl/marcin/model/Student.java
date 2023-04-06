@@ -4,7 +4,7 @@ import pl.marcin.util.QueryItem;
 
 import java.util.Random;
 
-public class Student implements QueryItem {
+public class Student implements QueryItem, Comparable<Student> {
     private static int LAST_ID = 10000;
     private int studentId;
     private String name;
@@ -43,5 +43,10 @@ public class Student implements QueryItem {
             case "YEARSTARTED"-> yearStared==(Integer.parseInt(value));
             default -> false;
         };
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Integer.valueOf(studentId).compareTo(o.studentId);
     }
 }

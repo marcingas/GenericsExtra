@@ -1,5 +1,3 @@
-package pl.marcin;
-
 import pl.marcin.model.Student;
 import pl.marcin.model.UJStudent;
 import pl.marcin.util.QueryList;
